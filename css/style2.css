@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-nav {
+        margin: 0 auto;
+        display: inline-block;
+        float: none;
+        justify-content: center;
+    }
+}
+
+.background {
+    position: fixed; /* Menggunakan fixed agar latar belakang tetap di tempatnya */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Menggunakan tinggi viewport */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 170, 255, 0.367), rgba(11, 247, 208, 0.287) 90%);
+    z-index: 1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    margin: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.navbar .container-fluid {
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.nav-link {
+    font-weight: 750;
+    color: black;
+}
+
+.navbar-nav {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 60px;
+}
+
+.nav-item:last-child .nav-link {
+    background-color: #FFD700;
+    border-radius: 20px;
+    padding: 10px 50px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 20px;
+}
+
+.nav-item:last-child .nav-link:hover {
+    background-color: #FFBF00;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: white; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+
